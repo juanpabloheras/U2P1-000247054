@@ -33,3 +33,7 @@ jobs:
           name: surefire-reports
           path: target/surefire-reports/
           if-no-files-found: warn
+
+      - name: Build de la imagen de Docker
+        run: docker build -t descuento-volumen:${{ github.sha }} .
+ 
